@@ -69,10 +69,6 @@ class _JobsState extends State<Jobs> {
             position: LatLng(plat, plang),
             infoWindow: InfoWindow(title: 'Pick point'));
       }
-      // _markers.add(Marker(
-      //     markerId: MarkerId('1'),
-      //     position: LatLng(plat, plang),
-      //     infoWindow: InfoWindow(title: 'Pick point')));
     }
     if (dlat != null && dlang != null) {
       if (_markers.length < 2) {
@@ -214,27 +210,12 @@ class _JobsState extends State<Jobs> {
                                               result.geometry.location.lng != null) {
                                             plat = result.geometry.location.lat;
                                             plang = result.geometry.location.lng;
-                                            // nlatitude = double.parse(result.geometry.location.lat.toString());
-                                            // nlongitude = double.parse(result.geometry.location.lng.toString());
 
                                             print("nLatitude: $plat");
                                             print("nLongitude: $plang");
                                             // setState(() {});
                                             addMarkerP();
-                                            // final coordinates = new Coordinates(
-                                            //     result.geometry.location.lat,
-                                            //     result.geometry.location.lng);
-                                            // var addresses = await Geocoder.local
-                                            //     .findAddressesFromCoordinates(coordinates);
-                                            // var first = addresses.first;
-                                            // var address = first.addressLine;
-                                            // prefs = await SharedPreferences.getInstance();
-                                            // prefs.setString('userlat', result.geometry.location.lat.toStringAsFixed(4));
-                                            // prefs.setString('userlong', result.geometry.location.lng.toStringAsFixed(4));
-
-                                            // var userId = userDetails.id;
-                                            // print('to insert lat ${result.geometry.location.lat.toStringAsFixed(4)}');
-                                            // print('to insert long ${result.geometry.location.lng.toStringAsFixed(4)}');
+                               
                                           } else {
                                             print("Address not Changed");
                                           }
@@ -297,20 +278,7 @@ class _JobsState extends State<Jobs> {
                                             print("nLongitude: $dlang");
                                             // setState(() {});
                                             addMarkerP();
-                                            // final coordinates = new Coordinates(
-                                            //     result.geometry.location.lat,
-                                            //     result.geometry.location.lng);
-                                            // var addresses = await Geocoder.local
-                                            //     .findAddressesFromCoordinates(coordinates);
-                                            // var first = addresses.first;
-                                            // var address = first.addressLine;
-                                            // prefs = await SharedPreferences.getInstance();
-                                            // prefs.setString('userlat', result.geometry.location.lat.toStringAsFixed(4));
-                                            // prefs.setString('userlong', result.geometry.location.lng.toStringAsFixed(4));
-
-                                            // var userId = userDetails.id;
-                                            // print('to insert lat ${result.geometry.location.lat.toStringAsFixed(4)}');
-                                            // print('to insert long ${result.geometry.location.lng.toStringAsFixed(4)}');
+                                     
                                           } else {
                                             print("Address not Changed");
                                           }
